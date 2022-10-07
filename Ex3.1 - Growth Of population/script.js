@@ -13,8 +13,8 @@
 //   1141 + 1141 * 0.02 + 50 => 1213
 // It will need 3 entire years.
 //--------------------------------------------------------------------------------------------------
-//   More generally given parameters:
-//   - p0, percent, aug (inhabitants coming or leaving each year), p (population to surpass)
+//  More generally given parameters:
+// - p0, percent, aug (inhabitants coming or leaving each year), p (population to surpass)
 // - the function nb_year should return n number of entire years needed to get a population
 // greater or equal to p.
 // - aug is an integer, percent a positive or null number, p0 and p are positive integers (> 0)
@@ -27,42 +27,14 @@
 
 function nb_year(p0, percent, aug, p) {
   let years = 0; //years counter
-  let pVar = p0 * Math.pow((1 + percent / 100), years); // pVar is p0 calculated like intrest rate... like p0 * (1+a/100)^n.
-  let augVar = 0; // augVar calculated as (aug * (1+a/100)^n-1) + (aug * (1+a/100)^n-2) ... (aug * (1+a/100)^n-n)
-  if (pVar+augVar >= p){
-    return years; // this is for 0 years
-  }else{
-    while (true){
-      years++;
-      pVar=p0*(1+percent/100)**years;
-      for (let i=0;i<=years-1 ;i++){
-        // console.log(`years ${years} i ${i} augvar ${augVar} pVar ${pVar} sum ${pVar+augVar}`)
-        augVar+= aug * ((1+percent)/100)**i;
-      }
-      if (pVar+augVar >= p) {return years;}
-      console.log(`years ${years} augvar ${augVar} pVar ${pVar} sum ${pVar+augVar}`)
-      augVar = 0;
-    }
+  let current = p0;
+  while (current<p){
+    current = Math.ceil(current * (1+percent/100) +aug);
+    // math.ceil because no one wants to meet that new 0.6875 person who just moved for an awkward elevator talk, right?
+    years++;
   }
-
-
+  return years
 }
 
-// function nb_year(p0, percent, aug, p) {
-//   let years = ;
-//
-//   while (true) {
-//     if (p0 * Math.pow((1 + (percent / 100)),years) + years * aug >= p) {
-//       console.log("population: ",(p0 * Math.pow((1 + (percent / 100)),years) + years * aug))
-//       return years;
-//     } else {
-//       console.log("ELSE population: ",(p0 * Math.pow((1 + (percent / 100)),years) + years * aug))
-//       years++;
-//     }
-//   }
-// }
-
-console.log(nb_year(1500, 5, 100, 5000));
-// console.log(nb_year(1500000, 2.5, 10000, 2000000))
-// console.log(nb_year(1500000, 2.5, 10000, 2000000))
-// console.log(nb_year(1500000, 2.5, 10000, 2000000))
+console.log(nb_year(1500, 5, 100, 5000)); // 15
+console.log(nb_year(1500000, 2.5, 10000, 2000000));  // 10
