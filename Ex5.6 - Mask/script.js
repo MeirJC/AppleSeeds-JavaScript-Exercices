@@ -12,14 +12,14 @@
 // maskify("Nananananananananananananananana Batman!") == "####################################man!
 
 function maskify(str) {
-  str.length <= 4) {
+  if (str.length <= 4) {
     return str;
   }
   str = str.split("");
   for (let i = 0; i < str.length - 4; i++) {
     str[i] = "#";
   }
-  return str.join("")
+  return str.join("");
 }
 
 console.log(maskify("4556364607935616")); // ############5616

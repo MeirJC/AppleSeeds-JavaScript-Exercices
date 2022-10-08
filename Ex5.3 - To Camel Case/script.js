@@ -9,7 +9,10 @@
 function toCamelCase(str) {
   let arr = str.split(/[-.*_]/);
   for (let i = 0; i < arr.length; i++) {
-    i === 0 ? arr[i] = arr[i].charAt(0) + arr[i].slice(1).toLowerCase() : arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase();
+    i === 0
+      ? (arr[i] = arr[i].charAt(0) + arr[i].slice(1).toLowerCase())
+      : (arr[i] =
+          arr[i].charAt(0).toUpperCase() + arr[i].slice(1).toLowerCase());
   }
 
   return arr.join("");

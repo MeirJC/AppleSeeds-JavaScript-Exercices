@@ -3,14 +3,14 @@
 // characters of a string. You're given one parameter, the original string. You don't have to worry
 // with strings with less than two characters.
 
-function trimmingStrings(str){
+function trimmingStrings(str) {
   // removes any leading and ending spaces if existed, then trims the string.
-  return str.trim().slice(1,-1);
+  return str.trim().slice(1, -1);
 }
 
-console.log(trimmingStrings(" Qhidinge       "))
-console.log(trimmingStrings("Dad"))
-console.log(trimmingStrings("       emessd")+trimmingStrings("rager     "))
-console.log(trimmingStrings("in")+trimmingStrings("tink"))
-console.log(trimmingStrings("theres"))
-console.log(trimmingStrings(" -:)-"))
+console.log(trimmingStrings(" Qhidinge       "));
+console.log(trimmingStrings("Dad"));
+console.log(trimmingStrings("       emessd") + trimmingStrings("rager     "));
+console.log(trimmingStrings("in") + trimmingStrings("tink"));
+console.log(trimmingStrings("theres"));
+console.log(trimmingStrings(" -:)-"));

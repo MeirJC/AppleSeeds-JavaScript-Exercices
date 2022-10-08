@@ -6,18 +6,19 @@
 // isIsogram("aba") == false
 // isIsogram("moOse") == false // -- ignore letter case
 
-function isIsogram(str){
-  arr=str.toLowerCase().split("");
+function isIsogram(str) {
+  arr = str.toLowerCase().split("");
   let twoStrikeAndYourOut = [];
   for (let i = 0; i < str.length; i++) {
-    if (twoStrikeAndYourOut.includes(arr[i])){
+    if (twoStrikeAndYourOut.includes(arr[i])) {
       return false;
     } else {
-      twoStrikeAndYourOut.push(arr[i])
+      twoStrikeAndYourOut.push(arr[i]);
     }
   }
   return true;
 }
+
 console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("aba"));
 console.log(isIsogram("moOse"));

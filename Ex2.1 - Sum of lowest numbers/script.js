@@ -8,11 +8,11 @@ function sumTwoLowest(arr) {
   const arrCopy = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 1 === 0 && arr[i] === Math.abs(arr[i])) {
-      arrCopy.push(arr[i])
+      arrCopy.push(arr[i]);
     }
   }
   let num1 = Math.min(...arrCopy);
-  arrCopy.splice(arrCopy.indexOf(num1), 1)
+  arrCopy.splice(arrCopy.indexOf(num1), 1);
   let num2 = Math.min(...arrCopy);
   return num1 + num2;
 }

@@ -9,17 +9,19 @@
 // a = "abcdefghijklmnopqrstuvwxyz"
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
-function longest(s1,s2){
+function longest(s1, s2) {
   let arr = s1.toLowerCase().split("").concat(s2.toLowerCase().split(""));
-  const newArr=[];
+  const newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (!newArr.includes(arr[i])){
-      newArr.push(arr[i])
+    if (!newArr.includes(arr[i])) {
+      newArr.push(arr[i]);
     }
   }
   return newArr.sort().join("");
 }
 
-console.log(longest("U","fedcba")); // abcdefu
-console.log(longest("xyaabbbccccdefww","xxxxyyyyabklmopq")); // abcdefklmopqwxy
-console.log(longest("abcdefghijklmnopqrstuvwxyz","abcdefghijklmnopqrstuvwxyz")); // abcdefghijklmnopqrstuvwxyz
+console.log(longest("U", "fedcba")); // abcdefu
+console.log(longest("xyaabbbccccdefww", "xxxxyyyyabklmopq")); // abcdefklmopqwxy
+console.log(
+  longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz")
+); // abcdefghijklmnopqrstuvwxyz

@@ -13,14 +13,14 @@
 // or this:
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
 
-function nthOfFibonacci(startPoint,n = 1){
-  const fibArr=[1,1];
+function nthOfFibonacci(startPoint, n = 1) {
+  const fibArr = [1, 1];
   startPoint === 0 && fibArr.unshift(startPoint);
-  for (let i=fibArr.length;i<n;i++){
-    fibArr.push(fibArr[i-1]+fibArr[i-2]);
+  for (let i = fibArr.length; i < n; i++) {
+    fibArr.push(fibArr[i - 1] + fibArr[i - 2]);
   }
   // console.log(fibArr);
-  return fibArr[n-1];
+  return fibArr[n - 1];
 }
 
-console.log(nthOfFibonacci(0,84))
+console.log(nthOfFibonacci(0, 84));

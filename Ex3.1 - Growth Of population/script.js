@@ -24,17 +24,16 @@
 // Note: Don't forget to convert the percent parameter as a percentage in the body of your
 // function: if the parameter percent is 2 you have to convert it to 0.02.
 
-
 function nb_year(p0, percent, aug, p) {
   let years = 0; //years counter
   let current = p0;
-  while (current<p){
-    current = Math.ceil(current * (1+percent/100) +aug);
+  while (current < p) {
+    current = Math.ceil(current * (1 + percent / 100) + aug);
     // math.ceil because no one wants to meet that new 0.6875 person who just moved for an awkward elevator talk, right?
     years++;
   }
-  return years
+  return years;
 }
 
 console.log(nb_year(1500, 5, 100, 5000)); // 15
-console.log(nb_year(1500000, 2.5, 10000, 2000000));  // 10
+console.log(nb_year(1500000, 2.5, 10000, 2000000)); // 10

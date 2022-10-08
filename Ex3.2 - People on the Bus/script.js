@@ -13,15 +13,39 @@
 // >= 0. So the return integer can't be negative.
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
-const testArr =  [[10,0],[9,1],[8,2],[7,3],[6,4],[5,5],[4,6],[3,7],[2,8],[1,9],[0,9]];
-const testArr2 =  [[10,0],[9,1],[8,12],[7,3],[6,4],[5,5],[4,6],[3,7],[2,8],[1,9],[0,9]]; // test for total < 0
+const testArr = [
+  [10, 0],
+  [9, 1],
+  [8, 2],
+  [7, 3],
+  [6, 4],
+  [5, 5],
+  [4, 6],
+  [3, 7],
+  [2, 8],
+  [1, 9],
+  [0, 9],
+];
+const testArr2 = [
+  [10, 0],
+  [9, 1],
+  [8, 12],
+  [7, 3],
+  [6, 4],
+  [5, 5],
+  [4, 6],
+  [3, 7],
+  [2, 8],
+  [1, 9],
+  [0, 9],
+]; // test for total < 0
 const getOn = 0;
 const getOff = 1;
 
-function pepoleOnTheBus(arr){
-  let total=0;
+function pepoleOnTheBus(arr) {
+  let total = 0;
   for (let item of arr) total += item[getOn] - item[getOff];
-  return total>=0?total:undefined;
+  return total >= 0 ? total : undefined;
 }
 
 console.log(pepoleOnTheBus(testArr)); // 1

@@ -13,10 +13,10 @@
 // Testing: [1, 0, 1, 1] ==> 11
 // However, the arrays can have varying lengths, not just limited to 4.
 //--------------------------------------------------------------------------------
-function binaryToBaseTen(arr){
+function binaryToBaseTen(arr) {
   let sum = 0;
-  for (let i=0; i<arr.length ;i++){
-    sum += arr[i] * Math.pow(2,arr.length-1-i);
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i] * Math.pow(2, arr.length - 1 - i);
   }
   return sum;
 }

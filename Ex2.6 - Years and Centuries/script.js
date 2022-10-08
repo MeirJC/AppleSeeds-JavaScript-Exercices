@@ -11,9 +11,9 @@
 // centuryFromYear(2000) returns (20)
 //------------------------------------------------------------------
 
-function centuryFromYear(year){
-  year-=1; //1901-2000 ---> 1900-1999
-  return ((year-year%100)/100)+1;
+function centuryFromYear(year) {
+  year -= 1; //1901-2000 ---> 1900-1999
+  return (year - (year % 100)) / 100 + 1;
 }
 
 console.log(centuryFromYear(1705)); // 18
@@ -24,9 +24,9 @@ console.log(centuryFromYear(2000)); // 20
 // ---------------------- Another Way ------------------------------
 //------------------------------------------------------------------
 
-function centuryFromYear2(year){
-  year-=1; //1901-2000 ---> 1900-1999
-  return (year+(100-year%100))/100;
+function centuryFromYear2(year) {
+  year -= 1; //1901-2000 ---> 1900-1999
+  return (year + (100 - (year % 100))) / 100;
 }
 
 console.log(centuryFromYear2(1705)); // 18

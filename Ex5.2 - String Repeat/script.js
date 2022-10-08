@@ -3,11 +3,11 @@
 //  // "IIIIII"
 // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
 
-function repeatStr(count,src){
+function repeatStr(count, src) {
   let repeat = src.repeat(count);
   return repeat;
 }
 
-console.log(repeatStr(6, "I"))
-console.log(repeatStr(7, `_.~"(`))
-console.log(repeatStr(5, "Hello")) //HelloHelloHelloHelloHello
+console.log(repeatStr(6, "I"));
+console.log(repeatStr(7, `_.~"(`));
+console.log(repeatStr(5, "Hello")); //HelloHelloHelloHelloHello

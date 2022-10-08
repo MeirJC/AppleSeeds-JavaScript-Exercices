@@ -10,11 +10,11 @@
 function accum(str) {
   arr = str.toUpperCase().split("");
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i] + arr[i].toLowerCase().repeat(i)
+    arr[i] = arr[i] + arr[i].toLowerCase().repeat(i);
   }
   return arr.join("-");
 }
 
-console.log(accum("abcd")) //A-Bb-Ccc-Dddd
-console.log(accum("RqaEzty")) // R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy
-console.log(accum("cwAt")) // C-Ww-Aaa-Tttt
+console.log(accum("abcd")); //A-Bb-Ccc-Dddd
+console.log(accum("RqaEzty")); // R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy
+console.log(accum("cwAt")); // C-Ww-Aaa-Tttt

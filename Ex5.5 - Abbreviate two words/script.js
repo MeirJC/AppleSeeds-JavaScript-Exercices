@@ -6,14 +6,13 @@
 // Sam Harris => S.H
 // Patrick Feeney => P.F
 
-function abbreviate(str){
+function abbreviate(str) {
   let arr = str.toUpperCase().split(" ");
   for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i][0];
   }
-  return  arr.join(".");
+  return arr.join(".");
 }
 
-
-console.log(abbreviate("Sam Harris"))
-console.log(abbreviate("Patrick Feeney"))
+console.log(abbreviate("Sam Harris"));
+console.log(abbreviate("Patrick Feeney"));

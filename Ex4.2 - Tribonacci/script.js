@@ -17,11 +17,10 @@
 //   return an empty array (except in C return NULL) and be ready for anything else which is not
 // clearly specified ;)
 
-
 function nthOfFibonacci(signature, n = 1) {
   if (n == 0) return [];
   if (n < 0) return null;
-  const tribonacci = signature.slice(0)
+  const tribonacci = signature.slice(0);
   for (let i = tribonacci.length; i < n; i++) {
     tribonacci.push(tribonacci[i - 1] + tribonacci[i - 2] + tribonacci[i - 3]);
   }
